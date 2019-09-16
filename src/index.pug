@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="pt")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Portifólio | Carolina Freire da Costa
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap")
+        link(rel="stylesheet", href="/assets/css/index.css")
+    body
+        header(class="header")
+            h1(class="title") Carolina Freire da Costa
+            nav
+                a(href="https://www.linkedin.com/in/carolina-freire/", target="_blank", class="link") LinkedIn
+        main(class="portifolio")
+            h2(class="hidden")
+            each val in portifolio
+                section(class="portifolio-item", style="background-image: url('" + val.image + "')")
+                    a(href=val.url)
+                        div(class="date")= val.date
+                        h3= val.title
+                        p= val.description
+        footer(class="footer")
+            p Esse é o Portifólio da Jornalista Carolina Freire da Costa, formada na UNESP de Bauru, especializada em assessoria e analise de contéudo.
